@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* CSS Reset */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom theme variables */
+:root {
+  --color-primary: #DA291C;   /* McDonald's red */
+  --color-secondary: #FFC72C;
+  --color-dark: #111111;
+}
+
+/* Custom utilities using Tailwind v4 */
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+}
+
+/* McDonald's Event Style Decorative Elements */
+@layer components {
+  .balloon-arch::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-secondary);
+    opacity: 0.7;
+  }
+  
+  .balloon-cluster {
+    position: relative;
+  }
+  
+  .balloon-cluster::before,
+  .balloon-cluster::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-secondary);
+    opacity: 0.3;
+  }
+  
+  .balloon-cluster::before {
+    top: -10px;
+    left: 10px;
+  }
+  
+  .balloon-cluster::after {
+    bottom: -15px;
+    right: 15px;
+  }
+  
+  .rounded-section {
+    border-radius: 24px;
+  }
+  
+  .kiosk-card {
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .counter-top {
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .counter-base {
+    border-radius: 0 0 16px 16px;
+  }
+}
