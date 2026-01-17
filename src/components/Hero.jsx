@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="bg-primary py-16 md:py-20 lg:py-24 text-center relative overflow-hidden min-h-screen flex items-center">
+    <section className="bg-primary py-16 md:py-20 lg:py-24   text-center relative overflow-hidden min-h-screen flex items-center">
       {/* Decorative circular shapes */}
       <div className="absolute top-6 sm:top-10 left-4 sm:left-10 w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-secondary opacity-30"></div>
       <div className="absolute top-1/4 sm:top-1/3 right-4 sm:right-20 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white opacity-40"></div>
@@ -28,7 +28,7 @@ export default function Hero() {
             <Link to="/contact" className="block bg-secondary text-primary px-8 py-4 rounded-full font-bold text-lg uppercase hover:bg-white hover:text-primary transition-all transform hover:scale-105 shadow-lg">
               Get Started
             </Link>
-            <Link to="/services" className="block bg-white text-primary border-2 border-secondary px-8 py-4 rounded-full font-bold text-lg uppercase hover:bg-secondary hover:text-white transition-all transform hover:scale-105 shadow-lg">
+            <Link to="/services" className="block bg-white text-primary border-2 border-secondary px-8 py-4 rounded-full font-bold text-lg uppercase hover:bg-red-50  transition-all transform hover:scale-105 shadow-lg">
               Explore Services
             </Link>
           </div>
